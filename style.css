@@ -1,0 +1,134 @@
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    width:100%;
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+    background-image: url("edu.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:100%;
+}
+nav{
+    width: 100%;
+    height:50px;
+    background-color: rgb(159, 78, 202);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 25px;
+}
+nav ul{
+    display: flex;
+    
+}
+nav .brand{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+nav ul li{
+    list-style:none;
+    padding:0px 8px;
+
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight:500;
+    font-size: 17px;
+}
+nav ul li a:hover{
+    background-color: rgb(242, 234, 234);
+    color:rgb(183, 183, 194);
+    transition: 0.5s ease;
+}
+nav ul li a.active{
+    background-color: rgb(242, 234, 234);
+    color:rgb(183, 183, 194);
+}
+nav .btn i{
+    color:rgb(242, 234, 234);
+    font-size:35px;
+    cursor:pointer;
+    display :none;
+
+}
+.main{
+    width:100%;
+    display:flex;
+}
+.content{
+    margin-top: 15%;
+    width:100%;   
+}
+.content h1{
+    font-size: 30px;
+    margin-bottom: 1%;
+}
+.content h3{
+    font-size: 15px;
+    margin-bottom: 3%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content p{
+    
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav #click{
+    display: none;
+}
+@media screen and (max-width: 940px){
+    nav .btn i{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        top:50px;
+        left:-100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(210, 150, 243);
+        display: block;
+        text-align: center;
+        transition: 0.6s ease;
+    }
+    nav ul li{
+        margin:35px 0px;
+    }
+    nav ul li a{
+         font-size: 20px;
+         display: block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active{
+        color:rgb(249, 254, 255);
+        background:none;
+    }
+    #click:checked~ul{
+        left:0%;
+    }
+    #click:checked~.btn i:before{
+        content:"\f00d";
+}
+.content{
+    margin-top: 15%;
+    width:100%;
+    text-align: center;
+    align-items: center;
+    padding:50px;
+   
+
+}
+
+}
